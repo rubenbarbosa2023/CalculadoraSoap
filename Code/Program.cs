@@ -11,6 +11,8 @@ var app = builder.Build();
 
 app.UseRouting();
 
-app.UseSoapEndpoint<ICalculadoraService>("/Calculadora.asmx", new SoapEncoderOptions());
+app.UseSoapEndpoint<ICalculadoraService>(
+    "/Calculadora.asmx", new SoapEncoderOptions()
+    );
 
 app.Run();
