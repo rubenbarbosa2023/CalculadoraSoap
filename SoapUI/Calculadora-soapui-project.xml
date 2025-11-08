@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="052344e9-1603-4dbf-aa1e-64fccf51ee13" activeEnvironment="Default" name="Calculadora" resourceRoot="" soapui-version="5.9.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="63789ec2-444c-4a8a-99c0-8dae5d7c7fca" wsaVersion="NONE" name="BasicHttpBinding_ICalculadoraService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ICalculadoraService" soapVersion="1_1" anonymous="optional" definition="http://localhost:5161/Calculadora.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:5161/Calculadora.asmx?wsdl"><con:part><con:url>http://localhost:5161/Calculadora.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" name="ICalculadoraService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="Somar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="a" type="xs:int"/>
+            <xs:element minOccurs="1" name="b" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SomarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="SomarResult" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Subtrair">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="a" type="xs:int"/>
+            <xs:element minOccurs="1" name="b" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SubtrairResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="SubtrairResult" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Dividir">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="a" type="xs:int"/>
+            <xs:element minOccurs="1" name="b" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DividirResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="DividirResult" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Multiplicar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="a" type="xs:int"/>
+            <xs:element minOccurs="1" name="b" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MultiplicarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="1" name="MultiplicarResult" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ICalculadoraService_Somar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Somar"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculadoraService_Somar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SomarResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculadoraService_Subtrair_InputMessage">
+    <wsdl:part name="parameters" element="tns:Subtrair"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculadoraService_Subtrair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubtrairResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculadoraService_Dividir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Dividir"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculadoraService_Dividir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DividirResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculadoraService_Multiplicar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Multiplicar"/>
+  </wsdl:message>
+  <wsdl:message name="ICalculadoraService_Multiplicar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplicarResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ICalculadoraService">
+    <wsdl:operation name="Somar">
+      <wsdl:input wsam:Action="http://tempuri.org/ICalculadoraService/Somar" message="tns:ICalculadoraService_Somar_InputMessage"/>
+      <wsdl:output wsam:Action="http://tempuri.org/ICalculadoraService/SomarResponse" message="tns:ICalculadoraService_Somar_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Subtrair">
+      <wsdl:input wsam:Action="http://tempuri.org/ICalculadoraService/Subtrair" message="tns:ICalculadoraService_Subtrair_InputMessage"/>
+      <wsdl:output wsam:Action="http://tempuri.org/ICalculadoraService/SubtrairResponse" message="tns:ICalculadoraService_Subtrair_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Dividir">
+      <wsdl:input wsam:Action="http://tempuri.org/ICalculadoraService/Dividir" message="tns:ICalculadoraService_Dividir_InputMessage"/>
+      <wsdl:output wsam:Action="http://tempuri.org/ICalculadoraService/DividirResponse" message="tns:ICalculadoraService_Dividir_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicar">
+      <wsdl:input wsam:Action="http://tempuri.org/ICalculadoraService/Multiplicar" message="tns:ICalculadoraService_Multiplicar_InputMessage"/>
+      <wsdl:output wsam:Action="http://tempuri.org/ICalculadoraService/MultiplicarResponse" message="tns:ICalculadoraService_Multiplicar_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICalculadoraService" type="tns:ICalculadoraService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Somar">
+      <soap:operation soapAction="http://tempuri.org/ICalculadoraService/Somar" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtrair">
+      <soap:operation soapAction="http://tempuri.org/ICalculadoraService/Subtrair" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dividir">
+      <soap:operation soapAction="http://tempuri.org/ICalculadoraService/Dividir" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicar">
+      <soap:operation soapAction="http://tempuri.org/ICalculadoraService/Multiplicar" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ICalculadoraService">
+    <wsdl:port name="BasicHttpBinding_ICalculadoraService" binding="tns:BasicHttpBinding_ICalculadoraService">
+      <soap:address location="http://localhost:5161/Calculadora.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:5161/Calculadora.asmx</con:endpoint></con:endpoints><con:operation id="69c4b963-c642-432e-8d42-412a4ee471a2" isOneWay="false" action="http://tempuri.org/ICalculadoraService/Dividir" name="Dividir" bindingOperationName="Dividir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d4f55dd1-7274-4a07-b028-ff92132816dd" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5161/Calculadora.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Dividir>
+         <tem:a>5</tem:a>
+         <tem:b>1</tem:b>
+      </tem:Dividir>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ICalculadoraService/Dividir"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="2e45e5bf-2f11-456a-8b1f-d06b457274e0" isOneWay="false" action="http://tempuri.org/ICalculadoraService/Multiplicar" name="Multiplicar" bindingOperationName="Multiplicar" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="73492f3c-497e-446b-8311-27c150d47f3a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5161/Calculadora.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Multiplicar>
+         <tem:a>?</tem:a>
+         <tem:b>?</tem:b>
+      </tem:Multiplicar>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ICalculadoraService/Multiplicar"/></con:call></con:operation><con:operation id="c7e98206-c1d8-45c8-9791-4f0cb637b17b" isOneWay="false" action="http://tempuri.org/ICalculadoraService/Somar" name="Somar" bindingOperationName="Somar" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="db72e110-8bde-4119-a700-0d065bc6aed9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5161/Calculadora.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Somar>
+         <tem:a>?</tem:a>
+         <tem:b>?</tem:b>
+      </tem:Somar>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ICalculadoraService/Somar"/></con:call></con:operation><con:operation id="166f9c05-25c6-4877-a5b5-0d323d9d44f9" isOneWay="false" action="http://tempuri.org/ICalculadoraService/Subtrair" name="Subtrair" bindingOperationName="Subtrair" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f47bf5cd-1451-4afc-863c-ef5fde4f5f38" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5161/Calculadora.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Subtrair>
+         <tem:a>?</tem:a>
+         <tem:b>?</tem:b>
+      </tem:Subtrair>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ICalculadoraService/Subtrair"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
